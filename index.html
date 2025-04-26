@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer | Smart Career Companion</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>Jobi<span>Fy</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Analyzer</a></li>
+                    <li><a href="#">Recommendations</a></li>
+                    <li><a href="#">Career Tips</a></li>
+                </ul>
+            </nav>
+            <button class="btn-contact">Contact</button>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>AI-Powered Resume Analysis</h2>
+                    <p>Get instant feedback on your resume with our advanced AI analyzer. Improve your chances of landing interviews with personalized recommendations.</p>
+                </div>
+                <div class="hero-image">
+                    <!-- <img src="https://illustrations.popsy.co/amber/artificial-intelligence.svg" alt="AI Resume Analysis"> -->
+                </div>
+            </section>
+
+            <section class="upload-section" id="upload-section">
+                <div class="upload-box">
+                    <div class="upload-header">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Your Resume</h3>
+                        <p>Supported formats: PDF, DOCX, TXT (Max 5MB)</p>
+                    </div>
+                    <div class="dropzone" id="dropzone">
+                        <input type="file" id="resume-upload" accept=".pdf,.docx,.txt" hidden>
+                        <label for="resume-upload" class="btn-upload">Choose File</label>
+                        <p>or drag & drop here</p>
+                    <button class="btn-primary" id="analyze-btn">Analyze Your Resume</button>
+                    </div>
+                    <div class="file-info" id="file-info"></div>
+                </div>
+            </section>
+
+            <section class="analysis-section hidden" id="analysis-section">
+                <div class="analysis-header">
+                    <h3>Analysis Results</h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress-bar"></div>
+                        <span id="progress-text">0%</span>
+                    </div>
+                </div>
+                <div class="analysis-grid">
+                    <div class="analysis-card" id="score-card">
+                        <div class="card-header">
+                            <i class="fas fa-star"></i>
+                            <h4>Overall Score</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="score-circle">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                                </svg>
+                                <span id="score-value">0</span>
+                            </div>
+                            <p id="score-feedback">Upload your resume to get started</p>
+                        </div>
+                    </div>
+                    <div class="analysis-card" id="keywords-card">
+                        <div class="card-header">
+                            <i class="fas fa-key"></i>
+                            <h4>Keywords Match</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="keywords-list" id="keywords-list"></div>
+                            <div class="match-percentage">
+                                <span id="match-percentage">0%</span>
+                                <p>match with job description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="analysis-card" id="suggestions-card">
+                        <div class="card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>AI Suggestions</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="suggestions-list" id="suggestions-list"></ul>
+                        </div>
+                    </div>
+                    <div class="analysis-card" id="jobs-card">
+                        <div class="card-header">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Recommended Jobs</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="jobs-list" id="jobs-list"></div>
+                            <button class="btn-secondary" id="view-more-jobs">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 ResumeAI. All rights reserved. @Priyanshu</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html>

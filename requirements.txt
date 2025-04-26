@@ -1,0 +1,40 @@
+# Core Requirements
+Flask==2.3.2
+python-dotenv==1.0.0
+
+# Frontend Development (if using Python for serving)
+Jinja2==3.1.2
+Werkzeug==2.3.6
+
+# Resume Parsing & Analysis
+python-resume-parser==1.0.3  # Basic parsing
+pyresparser==1.0.5  # More advanced parsing
+spacy==3.5.3
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+nltk==3.8.1
+pandas==2.0.3
+numpy==1.24.3
+
+# PDF Processing
+pdfminer.six==20221105
+PyPDF2==3.0.1
+python-docx==0.8.11
+
+# AI/ML Enhancements (optional)
+openai==0.27.8  # For GPT-powered suggestions
+scikit-learn==1.3.0  # For ML-based matching
+transformers==4.30.2  # For NLP tasks
+
+# Database (if adding user accounts)
+Flask-SQLAlchemy==3.0.3
+Flask-Login==0.6.2
+psycopg2-binary==2.9.6
+
+# Deployment
+gunicorn==20.1.0
+whitenoise==6.4.0
+
+# Development Tools
+black==23.7.0
+flake8==6.0.0
+pytest==7.4.0
